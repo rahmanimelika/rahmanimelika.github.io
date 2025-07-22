@@ -27,6 +27,7 @@
             min-height: 750px; /* برای ارتفاع بیشتر باکس */
             display: flex;
             flex-direction: column;
+               width: 100%;
         }
         .project-card:hover {
             transform: translateY(-5px);
@@ -69,10 +70,10 @@
     pointer-events: none;
      
 }
-        .card-img-top {
+ .project-card .card-img-top {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* یا contain بسته به نیازت */
+    height: auto;  /* یا height: 200px برای ارتفاع ثابت */
+    object-fit: cover;
     display: block;
 }
     </style>
