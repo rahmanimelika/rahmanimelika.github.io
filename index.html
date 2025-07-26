@@ -17,30 +17,24 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-
-            @media (max-width: 768px) {
-  /* زیرمنو (dropdown) در موبایل */
-  .dropdown-menu {
-    position: static !important; /* کنار آیتم والدش باز بشه */
-    float: none !important;
-    width: 100% !important; /* عرض کامل والد */
-    background-color: #f8f9fa !important;
-    box-shadow: none !important;
-    margin-top: 0.25rem !important;
-    border-radius: 0.25rem !important;
-  }
-
-  .dropdown-item {
-    white-space: normal !important; /* اجازه شکستن خط */
-  }
-
-  /* اطمینان از اینکه منوی بازشونده درون صفحه است */
-  .navbar-collapse {
-    overflow-x: hidden;
-  }
+            /* جلوگیری از درگ شدن تصویر */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
 }
 
-            .container.px-5 {
+/* متن‌ها را قابل شکستن می‌کنیم */
+.text-uppercase {
+  white-space: normal; /* متن خط‌شکن (wrap) */
+  word-wrap: break-word; /* شکستن کلمات طولانی */
+  overflow-wrap: break-word; /* مشابه بالا */
+  max-width: 100%; /* محدود کردن عرض به اندازه والد */
+  box-sizing: border-box;
+}
+
+/* تنظیمات کلی منو و دکمه همبرگر */
+.container.px-5 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,13 +49,13 @@
 
 .navbar-toggler {
   flex-shrink: 0;
-}
-            .navbar-toggler {
   cursor: pointer;
   transition: background-color 0.3s ease;
   padding: 6px 12px;
   border-radius: 6px;
   border: 1px solid transparent;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-toggler:hover {
@@ -78,13 +72,15 @@
   color: #007bff;
   transition: color 0.3s ease;
   user-select: none;
+  margin-left: 8px;
+  font-weight: 700;
 }
 
 .navbar-toggler:hover .menu-text {
   color: white;
 }
 
-/* موبایل: وسط چین دکمه و منو */
+/* استایل‌های موبایل */
 @media (max-width: 768px) {
   .navbar {
     padding: 0.5rem 1rem;
@@ -93,25 +89,46 @@
   .navbar-toggler {
     margin-left: auto; /* دکمه سمت راست */
   }
+
+  /* زیرمنو (dropdown) در موبایل */
+  .dropdown-menu {
+    position: static !important; /* کنار آیتم والدش باز شود */
+    float: none !important;
+    width: 100% !important; /* عرض کامل والد */
+    background-color: #f8f9fa !important;
+    box-shadow: none !important;
+    margin-top: 0.25rem !important;
+    border-radius: 0.25rem !important;
+  }
+
+  .dropdown-item {
+    white-space: normal !important; /* اجازه شکستن خط */
+  }
+
+  .navbar-collapse {
+    overflow-x: hidden;
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: white !important;
+    text-align: center;
+    padding: 8px 12px;
+  }
+
+  .nav-item {
+    margin: 0.25rem 0;
+  }
 }
-        img {
-            -webkit-user-drag: none;
-            user-drag: none;
-            pointer-events: none;
-        }
-           .text-uppercase {
-  white-space: normal; /* باعث میشه متن خط‌شکن (wrap) بشه */
-  word-wrap: break-word; /* شکستن کلمات طولانی */
-  overflow-wrap: break-word; /* مشابه بالا */
-  max-width: 100%; /* محدود کردن عرض به اندازه والد */
-  box-sizing: border-box;
-} {
-  white-space: normal; /* باعث میشه متن خط‌شکن (wrap) بشه */
-  word-wrap: break-word; /* شکستن کلمات طولانی */
-  overflow-wrap: break-word; /* مشابه بالا */
-  max-width: 100%; /* محدود کردن عرض به اندازه والد */
-  box-sizing: border-box;
-}
+
+
+        
+
         </style>
 
     </head>
