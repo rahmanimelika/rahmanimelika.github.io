@@ -18,6 +18,28 @@
         <link href="css/styles.css" rel="stylesheet" />
         <style>
 
+            @media (max-width: 768px) {
+  /* زیرمنو (dropdown) در موبایل */
+  .dropdown-menu {
+    position: static !important; /* کنار آیتم والدش باز بشه */
+    float: none !important;
+    width: 100% !important; /* عرض کامل والد */
+    background-color: #f8f9fa !important;
+    box-shadow: none !important;
+    margin-top: 0.25rem !important;
+    border-radius: 0.25rem !important;
+  }
+
+  .dropdown-item {
+    white-space: normal !important; /* اجازه شکستن خط */
+  }
+
+  /* اطمینان از اینکه منوی بازشونده درون صفحه است */
+  .navbar-collapse {
+    overflow-x: hidden;
+  }
+}
+
             .container.px-5 {
   display: flex;
   align-items: center;
