@@ -17,152 +17,54 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-    
-            /* جلوگیری از درگ شدن تصویر */
-img {
-  -webkit-user-drag: none;
-  user-drag: none;
-  pointer-events: none;
-}
-
-/* متن‌ها را قابل شکستن می‌کنیم */
-.text-uppercase {
-  white-space: normal; /* متن خط‌شکن (wrap) */
+        img {
+            -webkit-user-drag: none;
+            user-drag: none;
+            pointer-events: none;
+        }
+           .text-uppercase {
+  white-space: normal; /* باعث میشه متن خط‌شکن (wrap) بشه */
+  word-wrap: break-word; /* شکستن کلمات طولانی */
+  overflow-wrap: break-word; /* مشابه بالا */
+  max-width: 100%; /* محدود کردن عرض به اندازه والد */
+  box-sizing: border-box;
+} {
+  white-space: normal; /* باعث میشه متن خط‌شکن (wrap) بشه */
   word-wrap: break-word; /* شکستن کلمات طولانی */
   overflow-wrap: break-word; /* مشابه بالا */
   max-width: 100%; /* محدود کردن عرض به اندازه والد */
   box-sizing: border-box;
 }
-
-/* تنظیمات کلی منو و دکمه همبرگر */
-.container.px-5 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: nowrap;
-}
-
-.navbar-brand {
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.navbar-toggler {
-  flex-shrink: 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-toggler:hover {
-  background-color: #007bff;
-  border-color: #0056b3;
-}
-
-.navbar-toggler:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5);
-}
-
-.menu-text {
-  color: #007bff;
-  transition: color 0.3s ease;
-  user-select: none;
-  margin-left: 8px;
-  font-weight: 700;
-}
-
-.navbar-toggler:hover .menu-text {
-  color: white;
-}
-
-/* استایل‌های موبایل */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-      
-
-  .navbar-toggler {
-    margin-left: auto; /* دکمه سمت راست */
-  }
-
-  /* زیرمنو (dropdown) در موبایل */
-  .dropdown-menu {
-    position: static !important; /* کنار آیتم والدش باز شود */
-    float: none !important;
-    width: 100% !important; /* عرض کامل والد */
-    background-color: #f8f9fa !important;
-    box-shadow: none !important;
-    margin-top: 0.25rem !important;
-    border-radius: 0.25rem !important;
-  }
-
-  .dropdown-item {
-    white-space: normal !important; /* اجازه شکستن خط */
-  }
-
-  .navbar-collapse {
-    overflow-x: hidden;
-  }
-
-  .navbar-nav {
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center;
-  }
-
-  .nav-link {
-    color: black !important;
-    text-align: center;
-    padding: 8px 12px;
-  }
-
-  .nav-item {
-    margin: 0.25rem 0;
-  }
-}
-
-
-        
-
         </style>
 
     </head>
     <body oncontextmenu="return false;" class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-          
- <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container px-5">
-      <a class="navbar-brand" href="#">Resume Melika Rahmani</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <span class="menu-text">Menu</span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Resume</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
-            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-              <li><a class="dropdown-item" href="#">Graphic Design Portfolio</a></li>
-              <li><a class="dropdown-item" href="#">Web Design Portfolio</a></li>
-              <li><a class="dropdown-item" href="#">Business Card Designs</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Resume Melika Rahmani</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle fw-bold" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Projects
+                                </a>
+                                <ul class="dropdown-menu shadow rounded-3 border-0 animate__animated animate__fadeIn" aria-labelledby="projectsDropdown">
+                                    <li><a class="dropdown-item py-2" href="graphic-portfolio.html"><i class="bi bi-palette me-2 text-primary"></i>Graphic Design Portfolio</a></li>
+                                    <li><a class="dropdown-item py-2" href="Web Design Portfolio.html"><i class="bi bi-laptop me-2 text-success"></i>Web Design Portfolio</a></li>
+                                    <li><a class="dropdown-item py-2" href="business-cards.html"><i class="bi bi-credit-card me-2 text-warning"></i>Business Card Designs</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <!-- Header-->
             <header class="py-5">
                 <div class="container px-5 pb-5">
