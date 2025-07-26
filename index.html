@@ -34,6 +34,34 @@
   text-align: center;
 }
 
+
+@media (max-width: 768px) {
+  /* ... بقیه کدها ... */
+
+  /* تنظیم موقعیت زیرمنو به حالت عمودی و در جای خودش */
+  .dropdown-menu {
+    position: static !important;  /* تغییر موقعیت به static */
+    float: none !important;
+    display: block !important;    /* همیشه نمایش داده بشه وقتی باز میشه */
+    width: 100% !important;       /* عرض کامل در موبایل */
+    background-color: #f8f9fa !important;
+    margin-top: 0.25rem !important;
+    border-radius: 0.25rem !important;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.15) !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  /* آیتم‌های زیرمنو */
+  .dropdown-menu .dropdown-item {
+    padding: 0.5rem 1rem !important;
+    white-space: normal !important; /* برای شکستن خط در صورت طولانی بودن متن */
+  }
+}
+
+
+
+            
+
 /* دسکتاپ: وسط‌چین کردن منو */
 @media (min-width: 769px) {
   .navbar-nav {
