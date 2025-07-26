@@ -16,19 +16,44 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+         <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
         <style>
             /* نمایش همیشگی منو در موبایل */
-        @media (max-width: 768px) {
-            .navbar-collapse {
-                display: block !important;
-                visibility: visible !important;
-                height: auto !important;
-            }
+      @media (max-width: 768px) {
+      .navbar-collapse {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+      }
 
-            .navbar-toggler {
-                display: none !important;
-            }
-        }
+      .navbar-nav {
+        flex-direction: row !important;
+      }
+
+      .nav-item {
+        margin-right: 1rem;
+      }
+
+      .navbar-toggler {
+        display: none !important;
+      }
+
+      /* Dropdowns in mobile need positioning reset */
+      .dropdown-menu {
+        position: absolute;
+        transform: translateY(100%);
+        margin-top: 0.5rem;
+      }
+    }
 
 
             
@@ -55,39 +80,70 @@
     </head>
     <body oncontextmenu="return false;" class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
-           <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
-        <div class="container px-4">
-            <a class="navbar-brand fw-bold text-primary" href="index.html">Resume Melika Rahmani</a>
-            
-            <!-- همبرگر برای دسکتاپ -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- منو -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+     <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+    <div class="container px-4">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">
+        Resume Melika Rahmani
+      </a>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Projects
-                        </a>
-                        <ul class="dropdown-menu shadow rounded-3 border-0" aria-labelledby="projectsDropdown">
-                            <li><a class="dropdown-item py-2" href="graphic-portfolio.html"><i class="bi bi-palette me-2 text-primary"></i>Graphic Design</a></li>
-                            <li><a class="dropdown-item py-2" href="Web Design Portfolio.html"><i class="bi bi-laptop me-2 text-success"></i>Web Design</a></li>
-                            <li><a class="dropdown-item py-2" href="business-cards.html"><i class="bi bi-credit-card me-2 text-warning"></i>Business Cards</a></li>
-                        </ul>
-                    </li>
+      <!-- Toggler (hidden in mobile) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder d-flex align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="projectsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Projects
+            </a>
+            <ul
+              class="dropdown-menu shadow rounded-3 border-0"
+              aria-labelledby="projectsDropdown"
+            >
+              <li>
+                <a class="dropdown-item py-2" href="graphic-portfolio.html">
+                  <i class="bi bi-palette me-2 text-primary"></i>Graphic Design
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item py-2" href="Web Design Portfolio.html">
+                  <i class="bi bi-laptop me-2 text-success"></i>Web Design
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item py-2" href="business-cards.html">
+                  <i class="bi bi-credit-card me-2 text-warning"></i>Business Cards
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
             <!-- Header-->
             <header class="py-5">
                 <div class="container px-5 pb-5">
