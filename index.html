@@ -17,6 +17,14 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
+              @media (max-width: 768px) {
+      .navbar-collapse {
+        background-color: #007bff;
+      }
+      .nav-link {
+        color: white !important;
+      }
+    }
             /* جلوگیری از درگ شدن تصویر */
 img {
   -webkit-user-drag: none;
@@ -136,36 +144,31 @@ img {
         <main class="flex-shrink-0">
             <!-- Navigation-->
           
-<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-  <div class="container px-5">
-    <a class="navbar-brand" href="index.html">Resume Melika Rahmani</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      <span class="menu-text">Menu</span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Projects
-          </a>
-          <ul class="dropdown-menu shadow rounded-3 border-0" aria-labelledby="projectsDropdown">
-            <li><a class="dropdown-item" href="graphic-portfolio.html"><i class="bi bi-palette me-2 text-primary"></i>Graphic Design Portfolio</a></li>
-            <li><a class="dropdown-item" href="Web Design Portfolio.html"><i class="bi bi-laptop me-2 text-success"></i>Web Design Portfolio</a></li>
-            <li><a class="dropdown-item" href="business-cards.html"><i class="bi bi-credit-card me-2 text-warning"></i>Business Card Designs</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+ <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container px-5">
+      <a class="navbar-brand" href="#">Resume Melika Rahmani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="menu-text">Menu</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resume</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item" href="#">Graphic Design Portfolio</a></li>
+              <li><a class="dropdown-item" href="#">Web Design Portfolio</a></li>
+              <li><a class="dropdown-item" href="#">Business Card Designs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
             <!-- Header-->
             <header class="py-5">
                 <div class="container px-5 pb-5">
