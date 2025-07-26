@@ -26,47 +26,72 @@
     rel="stylesheet"
   />
         <style>
-    @media (max-width: 768px) {
-      .navbar-collapse {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center;
-        align-items: center;
-      }
+/* وسط‌چین کردن عنوان همیشه */
+.navbar-brand {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
 
-      .navbar-nav {
-        flex-direction: row !important;
-        background-color: #007bff !important;
-        padding: 10px;
-        border-radius: 10px;
-      }
+/* دسکتاپ: وسط‌چین کردن منو */
+@media (min-width: 769px) {
+  .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-      .navbar-nav .nav-link {
-        color: white !important;
-      }
+/* موبایل */
+@media (max-width: 768px) {
+  /* نمایش منو به صورت افقی و وسط‌چین */
+  .navbar-collapse {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+  }
 
-      .nav-item {
-        margin-right: 1rem;
-      }
+  .navbar-nav {
+    flex-direction: row !important;
+    justify-content: center !important;
+    background-color: #007bff !important; /* پس‌زمینه آبی */
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
 
-      .navbar-toggler {
-        display: none !important;
-      }
+  .navbar-nav .nav-link {
+    color: white !important;
+    text-align: center;
+  }
 
-      .dropdown-menu {
-        position: absolute;
-        transform: translateY(100%);
-        margin-top: 0.5rem;
-      }
-    }
+  .nav-item {
+    margin: 0 0.5rem;
+  }
 
-    /* Always center brand */
-    .navbar-brand {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      text-align: center;
-    }
+  /* تنظیم زیرمنوها (dropdown) */
+  .dropdown-menu {
+    position: static !important;
+    float: none;
+    width: auto;
+    background-color: #f8f9fa; /* رنگ پس‌زمینه زیرمنو */
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .dropdown-menu .dropdown-item {
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+
+  /* مخفی کردن دکمه همبرگر */
+  .navbar-toggler {
+    display: none !important;
+  }
+}
 
 
             
