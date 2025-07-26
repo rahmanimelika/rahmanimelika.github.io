@@ -26,8 +26,7 @@
     rel="stylesheet"
   />
         <style>
-            /* نمایش همیشگی منو در موبایل */
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
       .navbar-collapse {
         display: flex !important;
         flex-direction: row !important;
@@ -37,7 +36,7 @@
 
       .navbar-nav {
         flex-direction: row !important;
-        background-color: #007bff !important; /* آبی Bootstrap */
+        background-color: #007bff !important;
         padding: 10px;
         border-radius: 10px;
       }
@@ -59,6 +58,14 @@
         transform: translateY(100%);
         margin-top: 0.5rem;
       }
+    }
+
+    /* Always center brand */
+    .navbar-brand {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      text-align: center;
     }
 
 
@@ -86,62 +93,28 @@
     </head>
     <body oncontextmenu="return false;" class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
-      <!-- Navbar -->
+    <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
-    <div class="container px-4">
+    <div class="container px-4 flex-column">
+      <!-- Title Centered -->
       <a class="navbar-brand fw-bold text-primary" href="index.html">
         Resume Melika Rahmani
       </a>
 
-      <!-- Toggler -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
       <!-- Menu -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder d-flex align-items-center">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 small fw-bolder d-flex align-items-center justify-content-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
 
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="projectsDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Projects
             </a>
-            <ul
-              class="dropdown-menu shadow rounded-3 border-0"
-              aria-labelledby="projectsDropdown"
-            >
-              <li>
-                <a class="dropdown-item py-2" href="graphic-portfolio.html">
-                  <i class="bi bi-palette me-2 text-primary"></i>Graphic Design
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item py-2" href="Web Design Portfolio.html">
-                  <i class="bi bi-laptop me-2 text-success"></i>Web Design
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item py-2" href="business-cards.html">
-                  <i class="bi bi-credit-card me-2 text-warning"></i>Business Cards
-                </a>
-              </li>
+            <ul class="dropdown-menu shadow rounded-3 border-0" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item py-2" href="graphic-portfolio.html"><i class="bi bi-palette me-2 text-primary"></i>Graphic Design</a></li>
+              <li><a class="dropdown-item py-2" href="Web Design Portfolio.html"><i class="bi bi-laptop me-2 text-success"></i>Web Design</a></li>
+              <li><a class="dropdown-item py-2" href="business-cards.html"><i class="bi bi-credit-card me-2 text-warning"></i>Business Cards</a></li>
             </ul>
           </li>
 
