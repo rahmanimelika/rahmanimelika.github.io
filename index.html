@@ -27,7 +27,7 @@
   />
         <style>
             /* نمایش همیشگی منو در موبایل */
-      @media (max-width: 768px) {
+     @media (max-width: 768px) {
       .navbar-collapse {
         display: flex !important;
         flex-direction: row !important;
@@ -37,6 +37,13 @@
 
       .navbar-nav {
         flex-direction: row !important;
+        background-color: #007bff !important; /* آبی Bootstrap */
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .navbar-nav .nav-link {
+        color: white !important;
       }
 
       .nav-item {
@@ -47,7 +54,6 @@
         display: none !important;
       }
 
-      /* Dropdowns in mobile need positioning reset */
       .dropdown-menu {
         position: absolute;
         transform: translateY(100%);
@@ -80,14 +86,14 @@
     </head>
     <body oncontextmenu="return false;" class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
-     <!-- Navbar -->
+      <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
     <div class="container px-4">
       <a class="navbar-brand fw-bold text-primary" href="index.html">
         Resume Melika Rahmani
       </a>
 
-      <!-- Toggler (hidden in mobile) -->
+      <!-- Toggler -->
       <button
         class="navbar-toggler"
         type="button"
